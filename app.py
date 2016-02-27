@@ -21,7 +21,8 @@ def newUser():
 	isCollege = request.form['isCollege']
 	#languages?
 	try:
-    	cursor.execute("""INSERT INTO user VALUES (%s,%s,%s,%s,%s,%s)""",(firstName,lastName,password,bio,school,isCollege))
+    	cursor.execute("""INSERT INTO user VALUES (%s,%s,%s,%s,%s,%s)""",(firstName,lastName,
+    		password,bio,school,isCollege))
     	db.commit()
 	except:     
     	db.rollback()
