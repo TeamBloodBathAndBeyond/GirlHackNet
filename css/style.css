@@ -1,0 +1,44 @@
+/*
+Colors:
+  base:#51afbc
+  #AEE5ED
+  #7ACCD7
+  #32929F
+  #19808E
+  */
+body{
+  background-color:#51afbc;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+img{
+  display:block;
+  width:75%;
+  margin:0 auto;
+  border-radius: 10px;
+}
+#imgBanner{
+  width:100%;
+}
+#logo{
+  font-size: 3em;
+  color:#AEE5ED;
+  -webkit-text-stroke: 2px #404040;
+}
+#header{
+  width:100;
+  padding-right:10px;
+  background-color: #19808E;
+}
+#logInForm{
+  margin-top:-80px;
+  float:right;
+  text-align:inline;
+}
+#info{
+  width:73%;
+  margin: 10px auto;
+  padding: 10px;
+  /* border: 2px solid black; */
+  border-radius: 10px;
+  background-color: #f2f2f2;
+}
