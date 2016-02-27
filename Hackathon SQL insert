@@ -1,0 +1,86 @@
+CREATE TABLE hackathon(
+   id       INTEGER  NOT NULL PRIMARY KEY 
+  ,name     VARCHAR(30) NOT NULL
+  ,date     VARCHAR(40) NOT NULL
+  ,link     VARCHAR(100) NOT NULL
+  ,location VARCHAR(30) NOT NULL
+  ,is_US    BOOLEAN  NOT NULL
+);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (174,'AnvilHack','March 21st - 22nd','http://anvil.hacksmiths.club/','London, UK',false);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (145,'Apps For Students','April 25th - 26th','http://aftleuven.be/appsforstudents.php','Leuven, Belgium',false);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (160,'BrumHack 2.0','March 28th - 29th','https://www.brumhack.co.uk/','Birmingham, UK',false);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (181,'DragonHack','May 16th - 17th','http://dragonhack.si/','Ljubljana, Slovenia',false);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (159,'FebJam','February 19th - 20th','https://www.eventbrite.co.uk/e/febjam-huddevfieldhucs-game-jamhackathon-tickets-15500094199','Huddersfield, UK',false);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (162,'Great Uni Hack','April 17th - 19th','http://greatunihack.co.uk/','Manchester, UK',false);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (143,'Hack The Burgh','March 14th - 15th','http://hacktheburgh.com/','Edinburgh, UK',false);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (192,'HackCyprus','June 26th - 28th','http://hackathons.hackcyprus.com/2015/','Nicosia, Cyprus',false);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (175,'HackDee','April 4th - 5th','http://www.hackdee.uk/','Dundee, UK',false);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (152,'HackLondon','February 28th - March 1st','https://hacklondon.org/','London, UK',false);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (194,'HackTM eHealth','June 27th - 28th','http://ehealth.hacktm.ro/','Timisoara, Romania',false);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (139,'IC Hack','February 7th - 8th','http://ichack.org/','London, UK',false);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (141,'KHacks','February 28th - March 1st','http://kairossociety.org/khacks/','Barcelona, Spain',false);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (177,'Landing Hack','April 11th - 12th','http://landing.mlh.io/','London, UK',false);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (179,'RGUHack','April 18th - 19th','http://rguhack.uk/','Aberdeen, UK',false);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (140,'StacsHack','February 21st - 22nd','http://www.stacshack.uk/','St Andrews, UK',false);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (142,'WarwickHACK 2.0','March 7th - 8th','http://techsoc.uwcs.co.uk/hack','Warwick, UK',false);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (176,'WearHacks Paris','May 22nd - 24th','https://wearhacksparis.splashthat.com/','Paris, France',false);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (157,'#FixIt','February 26th - 27th','https://events.withgoogle.com/fixit/','Mexico City, MX',false);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (123,'AppHack','January 23rd - 24th','http://cs.appstate.edu/apphack/','Boone, NC',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (138,'Bitcamp','April 10th - 12th','https://bitca.mp/','College Park, MD',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (124,'BrickHack','April 18th - 19th','http://brickhack.io/','Rochester, NY',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (106,'CBBhacks','February 6th - 8th','http://www.cbbhacks.org/','Brunswick, ME',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (170,'CarlHacks','April 24th - 26th','http://carlhacks.io/','Northfield, MN',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (164,'CodeRED','April 3rd - 4th','http://codered.cougarcs.com/','Houston, TX',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (102,'Dragon Hacks','January 10th - 11th','http://www.hack-dragon.com','Philadelphia, PA',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (113,'Fashion / Tech Hackathon','January 30th - February 1st','http://www.fashiontechhackathon.com/','Kent, OH',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (122,'Hack Arizona','March 6th - 8th','http://hackarizona.org/','Tucson, AZ',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (119,'Hack Western','March 27th - 29th','http://hackwestern.com/','London, ON',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (103,'Hack.Rice','January 31st - February 1st','http://hack.rice.edu','Houston, TX',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (147,'Hack.UVA','February 28th - March 1st','http://hackuva.io','Charlottesville, VA',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (149,'Hack@Brown','February 7th - 8th','http://hackatbrown.org/','Providenc, R',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (178,'Hack@Smith','March 28th - 29th','http://hackatsmith.org/','Northampton, MA',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (133,'HackBU','March 20th - 22nd','http://hackathon.hackbu.org','Binghamton, NY',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (190,'HackBajio','June 5th - 7th','http://hackbajio.com/','Leon, MX',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (167,'HackCU','April 10th - 12th','http://hackcu.org/','Boulder, CO',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (163,'HackCUU','March 13th - 15th','http://www.hackcuu.com/','Chihuahua, MX',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (128,'HackCWRU','February 6th - 8th','http://www.hackcwru.com/','Cleveland, OH',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (112,'HackDFW','February 28th - March 1st','http://hackdfw.com','Dallas-Ft. Worth, TX',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (169,'HackDartmouth','April 11th - 12th','http://www.hackdartmouth.io/','Hanover, NH',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (155,'HackFSU','March 20th - 22nd','http://hackfsu.com/','Tallahassee, FL',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (121,'HackHolyoke','April 3rd - 4th','http://www.hackholyoke.org/','South Hadley, MA',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (171,'HackISU','April 10th - 12th','http://hackisu.com','Ames, IA',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (125,'HackIllinois','February 27th - March 1st','http://www.hackillinois.org','Champaign-Urbana, IL',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (127,'HackMTY','March 21st - 22nd','http://hackmty.com/','Monterrey, MX',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (117,'HackNY','March 7th - 8th','http://hackny.org/','New York City, NY',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (150,'HackPSU','March 28th - 29th','http://www.hackpsu.org/','State College, PA',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (168,'HackPrinceton','April 11th - 12th','https://hackprinceton.com','Princeton, NJ',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (132,'HackRU','April 18th - 19th','http://hackru.org/','New Brunswick, NJ',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (116,'HackTCNJ','February 28th - March 1st','http://hacktcnj.com/','Ewing Township, NJ',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (184,'HackThePlanet','August 14th - 16th','http://hacktheplanet.mlh.io','San Francisco, CA',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (131,'HackUMass','April 11th - 12th','http://hackumass.com/','Amherst, MA',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (129,'HackYSU','April 17th - 19th','http://hackysu.com/','Youngstown, OH',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (153,'Hackhers','February 7th - 8th','http://hackhers.me','New Brunswick, NJ',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (107,'Hackpoly','February 20th - 21st','http://hackpoly.com/','Pomona, CA',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (120,'HopHacks','February 6th - 8th','https://hophacks.com/s15/','Baltimore, MD',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (148,'ID Hak','February 13th - 14th','http://idhac.deelopersfordevelopment.org/','Medford, MA',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (115,'MHacks','January 16th - 18th','http://mhacks.org/','Ann Arbor, MI',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (180,'MXHacks','April 10th - 12th','http://mxhacks.mx/','Mexico City, MX',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (135,'MadHacks','April 18th - 19th','http://madhacks.org/','Madison, WI',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (165,'MakeCU','February 28th - March 1st','https://makecu.org/','New York City, NY',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (108,'McHacks','February 21st - 22nd','http://mchacks.io','Montreal, QC',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (110,'Medstart','January 30th - February 1st','http://tuftsmedstart.com/','Boston, MA',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (130,'PearlHacks','March 21st - 22nd','http://pearlhacks.com/','Chapel Hill, NC',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (114,'PennApps','January 16th - 18th','http://2015s.pennapps.com/','Philadelphia, PA',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (173,'Project 34','May 2nd - 3rd','http://www.theproject34.com/','St. Petersburg, FL',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (151,'RedbirdHacks','April 24th - 26th','http://redbirdhacks.org/','Normal, IL',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (183,'RevolutionUC','May 15th - 17th','http://revolutionuc.com/','Cincinnati, OH',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (104,'SBHacks','January 30th - February 1st','http://www.ucsbhacks.com','Santa Barbara, CA',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (166,'SpartaHack','March 27th - 29th','http://www.spartahack.com/','East Lansing, MI',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (158,'SteelHacks','March 27th - 29th','http://steelhacks.com/','Pittsburgh, PA',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (109,'TreeHacks','February 20th - 22nd','http://www.treehacks.com/','Stanford, CA',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (118,'UHack','February 21st - 22nd','http://coe.miami.edu/uhack2015/','Miami, FL',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (111,'UofTHacks','January 30th - February 1st','https://uofthacks.com/','Toronto, ON',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (105,'VTHacks','February 6th - 8th','http://vthacks.com/','Blacksburg, VA',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (172,'VandyHacks','March 20th - 22nd','http://www.vandyhacks.org/','Nashville, TN',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (137,'deltaHacks','February 14th - 15th','http://deltahacks.io/','Hamilton, ON',true);
+INSERT INTO hackathon(id,name,date,link,location,is_US) VALUES (134,'hackCooper','February 14th - 15th','http://hackcooper.org/','New York City, NY',true);
