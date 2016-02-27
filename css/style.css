@@ -9,6 +9,8 @@ Colors:
 body{
   background-color:#51afbc;
   font-family: Tahoma, Geneva, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 img{
   display:block;
@@ -16,16 +18,20 @@ img{
   margin:0 auto;
   border-radius: 10px;
 }
+#signup{
+  margin-top: 2px;
+}
 #imgBanner{
   width:100%;
 }
 #logo{
   font-size: 3em;
   color:#AEE5ED;
-  -webkit-text-stroke: 2px #404040;
+  /*-webkit-text-stroke: 2px #32929F; */
 }
 #header{
-  width:100;
+  margin-top: -33px;
+  width:100%;
   padding-right:10px;
   background-color: #19808E;
 }
@@ -41,4 +47,17 @@ img{
   /* border: 2px solid black; */
   border-radius: 10px;
   background-color: #f2f2f2;
+}
+#pop-up{
+  display:none;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #AEE5ED;
+  margin:0 auto;
+  border-radius: 10px;
+  width:40%;
+  padding:5px 10px;
 }
