@@ -13,8 +13,7 @@ cursor = db.cursor()
 
 @app.route('/newUser/', methods=['POST'])
 def newUser():
-	#print("made it to the function")
-	#print(str(request.get_data()))
+	#TODO remove prints
 	firstName = request.form['firstName']
 	print(firstName)
 	lastName = request.form['lastName']
@@ -30,7 +29,8 @@ def newUser():
 	#print(isCollege)
 	#languages?
 	try:
-		cursor.execute("INSERT INTO users_test VALUES (%s,%s,%s,%s,%s,%s)",(firstName,lastName,password,bio,school,email))
+		#TODO update for actual table
+		cursor.execute("INSERT INTO users(email,firstName,lastName,password,school,bio,skills,isCollege) VALUES (%s,%s,%s,%s,%s,%s,%s)",(email,firstName,lastName,password,bio,school,email))
 		db.commit()
 		cursor.execute("SELECT * FROM users_test")
 		cursorList = list(cursor)
