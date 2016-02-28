@@ -14,9 +14,13 @@
     <form id='logInForm' action='validated.php' onsubmit="return validate();" method="POST">
       Name: <input type='text' name='accName'></input>
       Password: <input type='password' name='accPassword'></input>
+      <button id='signin'>Log In</button>
+    </form>
+      
+      
       <br>
       <button id='signup' onclick='div_show()'>Sign up here!</button>
-    </form>
+    
   </div>
   <div id='main'>
     <div id='pop-up'>
