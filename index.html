@@ -3,25 +3,35 @@
 <head>
   <meta charset="utf-8">
   <title>GirlHackNet</title>
+  <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="icon" href="imgs/miniLogo.jpg" type="image/jpg" sizes="16x16">
   <script src="js/popup.js"></script>
+  <script src="js/semantic.min.js"></script>
 </head>
 <body>
   <div id='header'>
     <!-- <img src='logo.jpg' id='logo' alt='GirlHackNet'> -->
     <h1 id='logo'>GirlHackNet</h1>
-    <form id='logInForm'>
-      Name: <input type='text' name='accName'></input>
-      Password: <input type='password' name='accPassword'></input>
-      <br>
-      <input type='submit' name='logInSubmit' value="Enter">
+    <form id='logInForm' class='ui form small'>
+      <div class="fields">
+        <div class="field">
+          <label>Name</label>
+          <input type="text" placeholder="Name" name='accName'>
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input type="password" placeholder="Password" name='accPassword'>
+        </div>
+      </div>
+      <input type='submit' class='ui button' id='logInSubmit' name='logInSubmit' value="Enter">
+      <button class='ui button' tabindex="0" id='signup' onclick='div_show()'>Sign up here!</button>
     </form>
-    <button id='signup' onclick='div_show()'>Sign up here!</button>
+
   </div>
   <div id='main'>
     <div id='pop-up'>
-      <form action="#" id="popForm" method="post" name="form">
+      <form action="#" id="popForm" class='ui form small' method="post" name="form">
         <h2>Join GirlHackNet Today!</h2>
         <hr>
         First Name:
@@ -40,19 +50,19 @@
         <input id="email" name="email" placeholder="Email" type="text">
         <br>
         Bio:
-        <textarea rows="4" cols="50"></textarea>
+        <textarea rows="4" cols="25"></textarea>
         <br>
         School:
         <input id="school" name="school" placeholder="School" type="text">
         <br>
-        <input type="radio" name="c-hs" value="college">College<br>
-        <input type="radio" name="c-hs" value="highschool">High School
+        <input type="radio" name="c-hs" value="college"> College<br>
+        <input type="radio" name="c-hs" value="highschool"> High School
         <br>
         Skills <span id='skillsSpan' style='font-size: 10pt; font-style: italic;'>ie Java,C++,Python,JSON (No spaces please!)</span>:
-        <textarea rows="4" cols="50"></textarea>
+        <textarea rows="4" cols="25" style='margin-bottom:10px;'></textarea>
         <br>
-        <input type='submit' href="javascript:%20check_empty()" value="Submit">
-        <button onclick ="div_hide()">Cancel</button>
+        <input type='submit' href="javascript:%20check_empty()" class='ui button small' value="Submit">
+        <button onclick ="div_hide()" class='ui button small'>Cancel</button>
       </form>
     </div>
     <div id='imgBanner'>
@@ -68,7 +78,7 @@
         GirlHackNet's intuitive design will allow all women from all walks of life to find that special group.
         The group in which you will spend blood, sweat, and tears with for 24-36 hours.
         So come join in on the fun!
-        </p>
+      </p>
     </div>
   </div>
 </body>
