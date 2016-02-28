@@ -131,7 +131,7 @@ def getHackathonInfo():
 	#Getting the hackathon event
 	cursor.execute("SELECT name, location, link, date FROM hackathon where id =%s",(id,))
 	hackathon = {}
-	hackData = cursor.fetchone()[0]
+	hackData = cursor.fetchone()
 	hackathon['name'] = hackData[0]
 	hackathon['location'] = hackData[1]
 	hackathon['link'] = hackData[2]
