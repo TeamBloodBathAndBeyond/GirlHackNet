@@ -29,6 +29,11 @@ def newUser():
 	#print(isCollege)
 	#languages?
 	try:
+		cursor.execute("SELECT * FROM users_test")
+		cursorList = list(cursor)
+		rowarray_list = []
+		for row in cursorList:
+			print(row)
 		cursor.execute("INSERT INTO users_test VALUES (%s,%s,%s,%s,%s, %s)",(firstName,lastName,password,bio,school,email))
 		db.commit()
 	except MySQLdb.Error, e:
