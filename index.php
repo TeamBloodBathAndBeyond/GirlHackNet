@@ -4,11 +4,13 @@
   <meta charset="utf-8">
   <title>GirlHackNet</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="skeleton.css">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
   <script src="validate.js"></script>
   <script src="js/popup.js"></script>
 </head>
 <body>
-  <div id='header'>
+  <div id='header' class='container'>
     <!-- <img src='logo.jpg' id='logo' alt='GirlHackNet'> -->
     <h1 id='logo'>GirlHackNet</h1>
     <form id='logInForm' action='validated.php' onsubmit="return validate();" method="POST">
@@ -22,7 +24,7 @@
       <button id='signup' onclick='div_show()'>Sign up here!</button>
     
   </div>
-  <div id='main'>
+  <div id='main' class='container'>
     <div id='pop-up'>
       <form action="#" id="popForm" method="post" name="form">
         <h2>Join GirlHackNet Today!</h2>
