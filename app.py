@@ -34,12 +34,13 @@ def getEvents():
 		cursor.execute("SELECT * FROM hackathon")
 		#rows = cursor.fetchall()
 		cursorList = list(cursor)
+		print len(cursorList)
 		rowarray_list = []
 		for row in cursorList:
 			print row
-			t = (row.name, row.date, row.link, row.location)
-			rowarray_list.append(t)
-		results = json.dumps(rowarray_list)	
-		return results 
+			#t = (row.name, row.date, row.link, row.location)
+			#rowarray_list.append(t)
+		#results = json.dumps(rowarray_list)	
+		return {} 
 	except MySQLdb.Error, e:
             print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
