@@ -13,7 +13,7 @@ cursor = db.cursor()
 @app.route('/newUser/', methods=['POST'])
 def newUser():
 	print("made it to the function")
-	print(str(request.form))
+	print(str(request[0]))
 	firstName = request.form['firstName']
 	print(firstName)
 	lastName = request.form['lastName']
