@@ -8,7 +8,7 @@ db = MySQLdb.connect(host="localhost",
 					 user="root",         
 					 passwd="girlhack",  
 					 db="GirlHack_DB")
-cur = db.cursor()
+cursor = db.cursor()
 
 @app.route('/newUser/', methods=['POST'])
 def newUser():
@@ -29,10 +29,15 @@ def newUser():
 #Assume US locations for now. Maybe EU someday
 @app.route('/getEvents/', methods=['GET'])
 def getEvents():
-	cursor.execute("SELECT name, date, link, location, is_US FROM hackathons WHERE isUS = true")
-	rows = cursor.fetchall()
-	rowarray_list = []
-	for row in rows:
-		t = (row.name, row.date, row.link, row.location)
-		rowarray_list.append(t)
-	return json.dumps(rowarray_list)
+	print "reached the function"
+	try:
+		cursor.execute("SELECT name, date, link, location, is_US FROM hackathon WHERE is_US = true")
+		rows = cursor.fetchall()
+		rowarray_list = []
+		for row in rows:
+			print row
+			t = (row.name, row.date, row.link, row.location)
+			rowarray_list.append(t)
+		return json.dumps(rowarray_list)
+	except MySQLdb.Error, e:
+            print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
