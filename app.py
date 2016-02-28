@@ -26,13 +26,18 @@ def newUser():
 	school = request.form['school']
 	print(school)
 	email = request.form['email']
-	#print(isCollege)
+	print(email)
+	skills = request.form['skills']
+	print(skills)
+	isCollege = request.form['isCollege']
+	print(isCollege)
 	#languages?
 	try:
 		#TODO update for actual table
 		cursor.execute("INSERT INTO users(email,firstName,lastName,password,school,bio,skills,isCollege) VALUES (%s,%s,%s,%s,%s,%s,%s)",(email,firstName,lastName,password,bio,school,email))
 		db.commit()
-		cursor.execute("SELECT * FROM users_test")
+		#TODO remove this
+		cursor.execute("SELECT * FROM users")
 		cursorList = list(cursor)
 		rowarray_list = []
 		for row in cursorList:
