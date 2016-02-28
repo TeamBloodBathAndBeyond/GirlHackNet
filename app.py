@@ -66,7 +66,7 @@ def getEvents():
 			t['link'] = row[3] 
 			t['location'] = row[4]
 			#Now go out and find the count of people at each event
-			cursor.execute("SELECT count from hackathonAttendance WHERE id=?",(id))
+			cursor.execute("SELECT count from hackathonAttendance WHERE id=?",id)
 			t['count'] = cursor.fetch()
 			rowarray_list.append(t)
 		results = json.dumps(rowarray_list)	
@@ -92,7 +92,7 @@ def getUserInfo(id):
 			print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
 
 #External API function. Expected url = /getUser/?userId=userId#
-#@app.route('/getUser/', methods=['GET'])
+@app.route('/getUser/', methods=['GET'])
 def retrieveUserInfo():
 	id = request.args.get('user')
 	return getUserInfo(id)
