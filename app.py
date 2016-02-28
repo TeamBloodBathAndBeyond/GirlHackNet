@@ -30,7 +30,7 @@ def newUser():
 @app.route('/getEvents/', methods=['GET'])
 def getEvents():
 	print "reached the function"
-	cursor.execute("SELECT name, date, link, location, is_US FROM hackathons WHERE isUS = true")
+	cursor.execute("SELECT name, date, link, location, is_US FROM hackathons WHERE is_US = true")
 	rows = cursor.fetchall()
 	rowarray_list = []
 	for row in rows:
