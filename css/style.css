@@ -19,7 +19,7 @@ img{
   margin-top: 30px;
   border-radius: 10px;
 }
-p{
+.opening{
   font-size: 14pt;
 }
 #signup{
@@ -46,11 +46,14 @@ p{
   background-color: #19808E;
 }
 #logInForm{
-  width:23%;
-  margin-top:-18%;
+  width:28%;
+  height:auto;
+  margin-top: -210px;
   float:right;
-  display:inline;
-  margin-right: 20px;
+}
+#divider{
+  margin-top: -230px;
+  padding-bottom:20px;
 }
 /*This code is bad and i should feel bad but idk how to fix.*/
 #logInSubmit{
@@ -67,7 +70,7 @@ p{
 #pop-up{
   display:none;
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -80,4 +83,12 @@ p{
 }
 h2{
   text-align: center;
+}
+#hack-main{
+  margin: 20px;
+  display: block;
+}
+#outerSeg{
+  width:50%;
+  margin:0 auto;
 }
