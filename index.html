@@ -6,28 +6,27 @@
   <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="icon" href="imgs/miniLogo.jpg" type="image/jpg" sizes="16x16">
+  <!-- <script src="js/semantic.min.js"></script> -->
   <script src="js/popup.js"></script>
-  <script src="js/semantic.min.js"></script>
 </head>
 <body>
   <div id='header'>
-    <!-- <img src='logo.jpg' id='logo' alt='GirlHackNet'> -->
-    <h1 id='logo'>GirlHackNet</h1>
-    <form id='logInForm' class='ui form small'>
-      <div class="fields">
-        <div class="field">
-          <label>Name</label>
-          <input type="text" placeholder="Name" name='accName'>
-        </div>
-        <div class="field">
-          <label>Password</label>
-          <input type="password" placeholder="Password" name='accPassword'>
-        </div>
+    <a href='index.html'>
+      <img src='imgs/logo.png' id='logo' alt='GirlHackNet'>
+    </a>
+    <!-- <h1 id='logo'>GirlHackNet</h1> -->
+    <form id='logInForm' class='ui form'>
+      <div class="field">
+        <label>Name</label>
+        <input type="text" placeholder="Name" name='accName'>
       </div>
-      <input type='submit' class='ui button' id='logInSubmit' name='logInSubmit' value="Enter">
-      <button class='ui button' tabindex="0" id='signup' onclick='div_show()'>Sign up here!</button>
+      <div class="field">
+        <label>Password</label>
+        <input type="password" placeholder="Password" name='accPassword'>
+      </div>
+      <input type='submit' class='ui button small' id='logInSubmit' name='logInSubmit' value="Enter">
     </form>
-
+    <button class='ui button small' id='signup' onclick='div_show()'>Sign up here!</button>
   </div>
   <div id='main'>
     <div id='pop-up'>
@@ -72,9 +71,14 @@
       <p>
         The number of men who attend hackathons is far greater than the number of women.
         This is an undeniable fact. Women have been trying to step back into the field of computing
-        but the community is certainly not getting any more estrogen. So we here at BloodBath & Beyond have come up with a solution!
+        but the community is certainly not getting any more estrogen.
+      </p>
+      <p>
+        So we here at BloodBath & Beyond © have come up with a solution!
         <strong>GirlHackNet</strong> is a way for women to connect with other women who are attending the same hackathons they are.
         Simply sign up with your name, email, and skill set and you will be on your way to a better hacking experience!
+      </p>
+      <p>
         GirlHackNet's intuitive design will allow all women from all walks of life to find that special group.
         The group in which you will spend blood, sweat, and tears with for 24-36 hours.
         So come join in on the fun!
