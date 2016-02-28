@@ -3,7 +3,7 @@ import MySQLdb
 import json
 
 app = Flask(__name__)
-
+app.debug = True
 db = MySQLdb.connect(host="localhost",    
 					 user="root",         
 					 passwd="girlhack",  
