@@ -77,7 +77,7 @@ def getEvents():
 #Internal API function
 def getUserInfo(id):
 	try:
-		cursor.execute("SELECT email, firstname, lastName, school, bio, skills, isCollege FROM users where id = ?",(id))
+		cursor.execute("SELECT email, firstname, lastName, school, bio, skills, isCollege FROM users where id = ?",id)
 		rawUserInfo = cursor.fetch()
 		userInfo = {}
 		userInfo['firstName'] = rawUserInfo[1]
