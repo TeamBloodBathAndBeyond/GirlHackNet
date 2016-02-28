@@ -77,11 +77,11 @@ def getEvents():
 #Internal API function
 def getUserInfo(id):
 	try:
-		cursor.execute("SELECT email, firstname, lastName, school, bio, skills, isCollege FROM users where id = %s",(id,))
+		cursor.execute("SELECT email, first_name, last_name, school, bio, skills, isCollege FROM users where id = %s",(id,))
 		rawUserInfo = cursor.fetchone()
 		userInfo = {}
-		userInfo['firstName'] = rawUserInfo[1]
-		userInfo['lastName'] = rawUserInfo[2]
+		userInfo['first_name'] = rawUserInfo[1]
+		userInfo['last_name'] = rawUserInfo[2]
 		userInfo['email'] = rawUserInfo[0]
 		userInfo['school'] = rawUserInfo[3]
 		userInfo['bio'] = rawUserInfo[4]
