@@ -29,10 +29,12 @@ def newUser():
 #Assume US locations for now. Maybe EU someday
 @app.route('/getEvents/', methods=['GET'])
 def getEvents():
+	print "reached the function"
 	cursor.execute("SELECT name, date, link, location, is_US FROM hackathons WHERE isUS = true")
 	rows = cursor.fetchall()
 	rowarray_list = []
 	for row in rows:
+		print row
 		t = (row.name, row.date, row.link, row.location)
 		rowarray_list.append(t)
 	return json.dumps(rowarray_list)
