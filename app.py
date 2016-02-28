@@ -25,11 +25,11 @@ def newUser():
 	print(bio)
 	school = request.form['school']
 	print(school)
-	isCollege = request.form['isCollege']
+	#isCollege = request.form['isCollege']
 	print(isCollege)
 	#languages?
 	try:
-		cursor.execute("INSERT INTO user VALUES (%s,%s,%s,%s,%s,%s)",(firstName,lastName,password,bio,school,isCollege))
+		cursor.execute("INSERT INTO users_test VALUES (%s,%s,%s,%s,%s,%s)",(firstName,lastName,password,bio,school))
 		db.commit()
 	except MySQLdb.Error, e:
 		print( "Run function Error %d: %s" % (e.args[0], e.args[1]))     
