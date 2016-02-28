@@ -100,7 +100,7 @@ def retrieveUserInfo():
 
 @app.route('/updateEventAttendance/', methods=['POST'])	
 def updateHackathonAttendance():
-	print(request.get_json())
+	print(request)
 	hackathonId = request.get_json()['hackathonId']
 	userId = request.get_json()['userId']
 	cursor.execute("SELECT count FROM hackathonAttendance WHERE id=?",(hackathonId))
