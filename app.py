@@ -70,5 +70,7 @@ def getEvents():
 
 def getUserInfo():
 def getAttendendanceCount():
-def updateAttedanceCount():
+def updateHackathonAttendance():
+	##TODO: add user and hackathon to Users at Hackathon
+	##TODO increment hackathonAttendancecount
 def getHackathonUsers():
