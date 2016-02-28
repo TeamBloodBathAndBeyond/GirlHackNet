@@ -137,7 +137,7 @@ def getHackathonInfo():
 	hackathon['link'] = hackData[2]
 	hackathon['date'] = hackData[3]
 	#Now get the hackers info
-	hackathon['hackers'] = 
+	#hackathon['hackers'] = 
 
 
 
