@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>GirlHackNet</title>
+  <title>GirlHackNet - Home</title>
   <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="icon" href="imgs/miniLogo.jpg" type="image/jpg" sizes="16x16">
@@ -15,75 +15,94 @@
       <img src='imgs/logo.png' id='logo' alt='GirlHackNet'>
     </a>
     <!-- <h1 id='logo'>GirlHackNet</h1> -->
-    <form id='logInForm' class='ui form'>
+    <!-- <form id='logInForm' class='ui form'>
+    <div class="field">
+    <label>Name</label>
+    <input type="text" placeholder="Name" name='accName'>
+  </div>
+  <div class="field">
+  <label>Password</label>
+  <input type="password" placeholder="Password" name='accPassword'>
+</div>
+<input type='submit' class='ui button small' id='logInSubmit' name='logInSubmit' value="Enter">
+</form> -->
+<div class="ui middle aligned very relaxed stackable grid" id='logInForm'>
+    <div class="ui form">
       <div class="field">
-        <label>Name</label>
-        <input type="text" placeholder="Name" name='accName'>
+        <label>Username</label>
+        <div class="ui left icon input">
+          <input type="text" placeholder="Username">
+          <i class="user icon"></i>
+        </div>
       </div>
       <div class="field">
         <label>Password</label>
-        <input type="password" placeholder="Password" name='accPassword'>
+        <div class="ui left icon input">
+          <input type="password">
+          <i class="lock icon"></i>
+        </div>
       </div>
-      <input type='submit' class='ui button small' id='logInSubmit' name='logInSubmit' value="Enter">
+      <div class="ui blue submit button">Login</div>
+    </div>
+</div>
+</div>
+<div id='main'>
+  <div id='pop-up'>
+    <form action="#" id="popForm" class='ui form small' method="post" name="form">
+      <h2>Join GirlHackNet Today!</h2>
+      <hr>
+      First Name:
+      <input id="fname" name="fname" placeholder="First Name" type="text">
+      <br>
+      Last Name:
+      <input id="lname" name="lname" placeholder="Last Name" type="text">
+      <br>
+      Password:
+      <input id="password" name="password" placeholder="Password" type="password">
+      <br>
+      Confirm Password:
+      <input id="confirm" name="confirm" placeholder="Confirm Password" type="password">
+      <br>
+      Email:
+      <input id="email" name="email" placeholder="Email" type="text">
+      <br>
+      Bio:
+      <textarea rows="4" cols="25"></textarea>
+      <br>
+      School:
+      <input id="school" name="school" placeholder="School" type="text">
+      <br>
+      <input type="radio" name="c-hs" value="college"> College<br>
+      <input type="radio" name="c-hs" value="highschool"> High School
+      <br>
+      Skills <span id='skillsSpan' style='font-size: 10pt; font-style: italic;'>ie Java,C++,Python,JSON (No spaces please!)</span>:
+      <textarea rows="4" cols="25" style='margin-bottom:10px;'></textarea>
+      <br>
+      <input type='submit' href="javascript:%20check_empty()" class='ui button small' value="Submit">
+      <button onclick ="div_hide()" class='ui button small'>Cancel</button>
     </form>
   </div>
-  <div id='main'>
-    <div id='pop-up'>
-      <form action="#" id="popForm" class='ui form small' method="post" name="form">
-        <h2>Join GirlHackNet Today!</h2>
-        <hr>
-        First Name:
-        <input id="fname" name="fname" placeholder="First Name" type="text">
-        <br>
-        Last Name:
-        <input id="lname" name="lname" placeholder="Last Name" type="text">
-        <br>
-        Password:
-        <input id="password" name="password" placeholder="Password" type="password">
-        <br>
-        Confirm Password:
-        <input id="confirm" name="confirm" placeholder="Confirm Password" type="password">
-        <br>
-        Email:
-        <input id="email" name="email" placeholder="Email" type="text">
-        <br>
-        Bio:
-        <textarea rows="4" cols="25"></textarea>
-        <br>
-        School:
-        <input id="school" name="school" placeholder="School" type="text">
-        <br>
-        <input type="radio" name="c-hs" value="college"> College<br>
-        <input type="radio" name="c-hs" value="highschool"> High School
-        <br>
-        Skills <span id='skillsSpan' style='font-size: 10pt; font-style: italic;'>ie Java,C++,Python,JSON (No spaces please!)</span>:
-        <textarea rows="4" cols="25" style='margin-bottom:10px;'></textarea>
-        <br>
-        <input type='submit' href="javascript:%20check_empty()" class='ui button small' value="Submit">
-        <button onclick ="div_hide()" class='ui button small'>Cancel</button>
-      </form>
-    </div>
-    <div id='imgBanner'>
-      <img class="img" src="imgs/coolGals1.jpg">
-          <button class='ui button massive' id='signup' onclick='div_show()'>Sign up today!</button>
-    </div>
-    <div id='info'>
-      <p>
-        The number of men who attend hackathons is far greater than the number of women.
-        This is an undeniable fact. Women have been trying to step back into the field of computing
-        but the community is certainly not getting any more estrogen.
-      </p>
-      <p>
-        So we here at BloodBath & Beyond © have come up with a solution!
-        <strong>GirlHackNet</strong> is a way for women to connect with other women who are attending the same hackathons they are.
-        Simply sign up with your name, email, and skill set and you will be on your way to a better hacking experience!
-      </p>
-      <p>
-        GirlHackNet's intuitive design will allow all women from all walks of life to find that special group.
-        The group in which you will spend blood, sweat, and tears with for 24-36 hours.
-        So come join in on the fun!
-      </p>
-    </div>
+  <div id='imgBanner'>
+    <img class="img" src="imgs/coolGals1.jpg">
+    <button class='ui button massive' id='signup' onclick='div_show()'>Sign up today!</button>
   </div>
+  <div id='info' class='opening ui segment'>
+    <p>
+      The number of men who attend hackathons is far greater than the number of women.
+      This is an undeniable fact. Women have been trying to step back into the field of computing
+      but the community is certainly not getting any more estrogen.
+    </p>
+    <p>
+      So we here at BloodBath & Beyond © have come up with a solution!
+      <strong>GirlHackNet</strong> is a way for women to connect with other women who are attending the same hackathons they are.
+      Simply sign up with your name, email, and skill set and you will be on your way to a better hacking experience!
+    </p>
+    <p>
+      GirlHackNet's intuitive design will allow all women from all walks of life to find that special group.
+      The group in which you will spend blood, sweat, and tears with for 24-36 hours.
+      So come join in on the fun!
+    </p>
+  </div>
+</div>
 </body>
 </html>
