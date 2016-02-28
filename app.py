@@ -87,7 +87,7 @@ def getUserInfo(id):
 		userInfo['bio'] = rawUserInfo[4]
 		userInfo['skills'] = rawUserInfo[5]
 		userInfo['isCollege'] = rawUserInfo[6]
-		return json.dumps(userInfo) 
+		return userInfo)
 	except MySQLdb.Error, e:
 			print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
 
@@ -95,7 +95,7 @@ def getUserInfo(id):
 @app.route('/getUser/', methods=['GET'])
 def retrieveUserInfo():
 	id = request.args.get('user')
-	return getUserInfo(id)
+	return json.dumps(getUserInfo(id))
 
 
 @app.route('/updateEventAttendance/', methods=['POST'])	
