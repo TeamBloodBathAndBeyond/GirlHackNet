@@ -12,8 +12,8 @@ cursor = db.cursor()
 
 @app.route('/newUser/', methods=['POST'])
 def newUser():
-	print("made it to the function")
-	print(str(request.get_data()))
+	#print("made it to the function")
+	#print(str(request.get_data()))
 	firstName = request.form['firstName']
 	print(firstName)
 	lastName = request.form['lastName']
@@ -26,7 +26,7 @@ def newUser():
 	school = request.form['school']
 	print(school)
 	#isCollege = request.form['isCollege']
-	print(isCollege)
+	#print(isCollege)
 	#languages?
 	try:
 		cursor.execute("INSERT INTO users_test VALUES (%s,%s,%s,%s,%s,%s)",(firstName,lastName,password,bio,school))
