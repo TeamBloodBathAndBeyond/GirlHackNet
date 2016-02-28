@@ -31,7 +31,7 @@ def newUser():
 	try:
 		cursor.execute("INSERT INTO user VALUES (%s,%s,%s,%s,%s,%s)",(firstName,lastName,password,bio,school,isCollege))
 		db.commit()
-	except:
+	except MySQLdb.Error, e:
 		print( "Run function Error %d: %s" % (e.args[0], e.args[1]))     
 		db.rollback()
 	return json.dumps({})
