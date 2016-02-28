@@ -16,12 +16,13 @@
       Name: <input type='text' name='accName'></input>
       Password: <input type='password' name='accPassword'></input>
       <br>
-      <button id='signup' onclick='div_show()'>Sign up here!</button>
+      <input type='submit' name='logInSubmit' value="Enter">
     </form>
+    <button id='signup' onclick='div_show()'>Sign up here!</button>
   </div>
   <div id='main'>
     <div id='pop-up'>
-      <form action="#" id="popForm" method="post" name="form">
+      <form action="localhost:800/new/User/" id="popForm" method="post" name="form">
         <h2>Join GirlHackNet Today!</h2>
         <hr>
         First Name:
@@ -45,7 +46,10 @@
         School:
         <input id="school" name="school" placeholder="School" type="text">
         <br>
-        Skills ie Java,C++,Python,JSON (No spaces please!):
+        <input type="radio" name="c-hs" value="college">College<br>
+        <input type="radio" name="c-hs" value="highschool">High School
+        <br>
+        Skills <span id='skillsSpan' style='font-size: 10pt; font-style: italic;'>ie Java,C++,Python,JSON (No spaces please!)</span>:
         <textarea rows="4" cols="50"></textarea>
         <br>
         <input type='submit' href="javascript:%20check_empty()" value="Submit">

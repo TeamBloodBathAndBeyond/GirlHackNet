@@ -39,6 +39,12 @@ img{
 #logInForm{
   margin-top:-80px;
   float:right;
+  display:inline;
+  margin-right: 20px;
+}
+#signup{
+  margin-top:-55px;
+  float:right;
   text-align:inline;
   margin-right: 20px;
 }
