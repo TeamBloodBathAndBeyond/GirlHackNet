@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>GirlHackNet</title>
+  <title>GirlHackNet - Home</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="icon" href="imgs/miniLogo.jpg" type="image/jpg" sizes="16x16">
   <script src="validate.js"></script>
@@ -25,7 +25,7 @@
   </div>
   <div id='main' class='container'>
     <div id='pop-up'>
-      <form action="localhost:800/new/User/" id="popForm" method="post" name="form">
+      <form action="localhost:800/newUser/" id="popForm" method="post" name="form">
         <h2>Join GirlHackNet Today!</h2>
         <hr>
         First Name:
