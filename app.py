@@ -31,16 +31,16 @@ def newUser():
 def getEvents():
 	print "reached the function"
 	try:
-		cursor.execute("SELECT * FROM hackathon")
+		cursor.execute("SELECT name, date, link, location FROM hackathon where is_US = 1")
 		#rows = cursor.fetchall()
 		cursorList = list(cursor)
-		print len(cursorList)
+		#print len(cursorList)
 		rowarray_list = []
 		for row in cursorList:
 			print row
-			#t = (row.name, row.date, row.link, row.location)
-			#rowarray_list.append(t)
-		#results = json.dumps(rowarray_list)	
-		return {} 
+			t = (row[0], row[1], row[2], row[3])
+			rowarray_list.append(t)
+		results = json.dumps(rowarray_list)	
+		return results 
 	except MySQLdb.Error, e:
             print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
