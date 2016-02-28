@@ -3,6 +3,7 @@ import MySQLdb
 import json
 
 app = Flask(__name__)
+#TODO remove this
 app.debug = True
 db = MySQLdb.connect(host="localhost",    
 					 user="root",         
@@ -53,7 +54,6 @@ def newUser():
 def getEvents():
 	try:
 		cursor.execute("SELECT id, name, date, link, location FROM hackathon where is_US = 1")
-		cursorList = list(cursor)
 		rowarray_list = []
 		for row in cursorList:
 			#building JSON object format
@@ -73,9 +73,71 @@ def getEvents():
 	except MySQLdb.Error, e:
             print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
 
-def getUserInfo():
-def getAttendendanceCount():
+#Internal API function
+def getUserInfo(id):
+	try:
+		cursor.execute("SELECT email, firstname, lastName, school, bio, skills, isCollege FROM users where id = ?",(id))
+		rawUserInfo = cursor.fetch()
+		userInfo = {}
+		userInfo['firstName'] = rawUserInfo[1]
+		userInfo['lastName'] = rawUserInfo[2]
+		userInfo['email'] = rawUserInfo[0]
+		userInfo['school'] = rawUserInfo[3]
+		userInfo['bio'] = rawUserInfo[4]
+		userInfo['skills'] = rawUserInfo[5]
+		userInfo['isCollege'] = rawUserInfo[6]
+		return json.dumps(userInfo) 
+	except MySQLdb.Error, e:
+            print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
+
+#External API function. Expected url = /getUser/?userId=userId#
+@app.route('/getUser/', methods=['GET'])
+def retrieveUserInfo():
+	id = request.args.get('user')
+	return getUserInfo(id)
+
+
+@app.route('/updateEventAttendance/', methods=['POST'])	
 def updateHackathonAttendance():
-	##TODO: add user and hackathon to Users at Hackathon
-	##TODO increment hackathonAttendancecount
-def getHackathonUsers():
+	hackathonId = request.data['hackathonId']
+	userId = request.data['userId']
+	cursor.execute("SELECT count FROM hackathonAttendance WHERE id=?",(hackathonId))
+	oldCount = cursor.fetch()
+	try:
+		cursor.execute("INSERT INTO usersAtHackathon(hackathonId, userId) VALUES(?,?)",(hackathonId, userId))
+		cursor.execute("UPDATE hackathonAttendance SET count=count+1 WHERE id=?",(hackathonId))
+		db.commit()
+	except MySQLdb.Error, e:
+        print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
+		db.rollback()
+
+#internal API function
+def getHackathonUsers(id):
+	try:
+		cursor.execute("SELECT userId FROM WHERE hackathonId=",(id))
+		usersInfo = []
+		for(row in cursor)
+			userId = row[0]
+			usersInfo.append(getUserInfo(userId))
+		return json.dumps(usersInfo)
+	except MySQLdb.Error, e:
+        print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
+
+
+#External API function. Expected url = /getEvent/?event=eventID
+@app.route('/getEvent/', methods=['GET'])
+def getHackathonInfo():
+	id = request.args.get('event')
+	#Getting the hackathon event
+	cursor.execute("SELECT name, location, link, date FROM hackathon where id = ?"(id))
+	hackathon = {}
+	hackData = cursor.fetch()
+	hackathon['name'] = hackData[0]
+	hackathon['location'] = hackData[1]
+	hackathon['link'] = hackData[2]
+	hackathon['date'] = hackData[3]
+	#Now get the hackers info
+	hackathon['hackers'] = 
+
+
+
