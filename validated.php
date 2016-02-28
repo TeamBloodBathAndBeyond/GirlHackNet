@@ -16,8 +16,9 @@
       $password = "girlhack";
       $dbname = "GirlHack_DB";
 
-      $usn = $_POST['usn'];
-      $pass = hash('sha256', $_POST['pass']);
+      $usn = $_POST['accName'];
+      $pass = hash('sha256', $_POST['accPassword']);
+
 
       $conn = new mysqli($servername, $username, $password, $dbname);
       if($conn->connect_error){
@@ -26,13 +27,15 @@
       $sql = "SELECT * from users_test";
       $result = $conn->query($sql);
 
-      if(result->num_rows > 0){
+      if($result->num_rows > 0){
         while($row = $result->fetch_assoc()){
           if($usn == $row['email'] && $pass = $row['password']){
-            echo "You're in.";
+            $userfname = $row['first_name'];
+            echo "<script>alert('Welcome back, $userfname!');</script>";
           }
           else{
-            echo "Username or password is incorrect";
+            echo "<script>alert('Username or Password is incorrect');</script>";
+            echo "<script>document.location.href='index.php'</script>";
           }
         }
       }
@@ -49,11 +52,14 @@
     <!-- <img src='logo.jpg' id='logo' alt='GirlHackNet'> -->
     <h1 id='logo'>GirlHackNet</h1>
     <form id='logInForm'>
-      Name: <input type='text' name='accName'></input>
+      Email: <input type='text' name='accName'></input>
       Password: <input type='password' name='accPassword'></input>
+      <button id='signin'>Log In</button>
+    </form>
+      
+      
       <br>
       <button id='signup' onclick='div_show()'>Sign up here!</button>
-    </form>
   </div>
   <div id='main'>
     <div id='pop-up'>

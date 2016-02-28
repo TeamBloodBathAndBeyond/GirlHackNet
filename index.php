@@ -13,12 +13,21 @@
     <!-- <img src='logo.jpg' id='logo' alt='GirlHackNet'> -->
     <h1 id='logo'>GirlHackNet</h1>
     <form id='logInForm' action='validated.php' onsubmit="return validate();" method="POST">
-      Name: <input type='text' name='accName'></input>
+      Email: <input type='text' name='accName'></input>
       Password: <input type='password' name='accPassword'></input>
+      <button id='signin'>Log In</button>
+    </form>
+
+
       <br>
+<<<<<<< HEAD
       <input type='submit' name='logInSubmit' value="Enter">
     </form>
     <button id='signup' onclick='div_show()'>Sign up here!</button>
+=======
+      <button id='signup' onclick='div_show()'>Sign up here!</button>
+
+>>>>>>> origin/master
   </div>
   <div id='main'>
     <div id='pop-up'>
