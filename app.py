@@ -79,14 +79,13 @@ def getUserInfo(id):
 	try:
 		cursor.execute("SELECT email, first_name, last_name, school, bio, skills, isCollege FROM users where email = %s",(id,))
 		rawUserInfo = cursor.fetchone()
-		userInfo = {}
-		userInfo['first_name'] = rawUserInfo[1]
-		userInfo['last_name'] = rawUserInfo[2]
-		userInfo['email'] = rawUserInfo[0]
-		userInfo['school'] = rawUserInfo[3]
-		userInfo['bio'] = rawUserInfo[4]
-		userInfo['skills'] = rawUserInfo[5]
-		userInfo['isCollege'] = rawUserInfo[6]
+		userInfo = dict(first_name=rawUserInfo[1], 
+			last_name=rawUserInfo[2], 
+			email=rawUserInfo[0], 
+			school=rawUserInfo[3], 
+			bio=rawUserInfo[4], 
+			skills=rawUserInfo[5],
+			isCollege=rawUserInfo[6]) 
 		return userInfo
 	except MySQLdb.Error, e:
 			print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
