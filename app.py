@@ -71,7 +71,7 @@ def getEvents():
 		results = json.dumps(rowarray_list)	
 		return results 
 	except MySQLdb.Error, e:
-            print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
+			print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
 
 #Internal API function
 def getUserInfo(id):
@@ -88,7 +88,7 @@ def getUserInfo(id):
 		userInfo['isCollege'] = rawUserInfo[6]
 		return json.dumps(userInfo) 
 	except MySQLdb.Error, e:
-            print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
+			print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
 
 #External API function. Expected url = /getUser/?userId=userId#
 @app.route('/getUser/', methods=['GET'])
@@ -108,7 +108,7 @@ def updateHackathonAttendance():
 		cursor.execute("UPDATE hackathonAttendance SET count=count+1 WHERE id=?",(hackathonId))
 		db.commit()
 	except MySQLdb.Error, e:
-        print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
+		print("Run function Error %d: %s" % (e.args[0], e.args[1]))
 		db.rollback()
 
 #internal API function
@@ -121,7 +121,7 @@ def getHackathonUsers(id):
 			usersInfo.append(getUserInfo(userId))
 		return json.dumps(usersInfo)
 	except MySQLdb.Error, e:
-        print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
+		print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
 
 
 #External API function. Expected url = /getEvent/?event=eventID
