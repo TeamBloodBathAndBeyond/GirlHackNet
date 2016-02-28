@@ -21,7 +21,7 @@ def newUser():
 	isCollege = request.form['isCollege']
 	#languages?
 	try:
-    	cursor.execute("""INSERT INTO user VALUES (%s,%s,%s,%s,%s,%s)""",(firstName,lastName,password,bio,school,isCollege))
+    	cursor.execute("INSERT INTO user VALUES (%s,%s,%s,%s,%s,%s)",(firstName,lastName,password,bio,school,isCollege))
     	db.commit()
 	except:     
     	db.rollback()
@@ -29,7 +29,7 @@ def newUser():
 #Assume US locations for now. Maybe EU someday
 @app.route('/getEvents/', methods=['GET'])
 def getEvents():
-	cursor.execute("""SELECT name, date, link, location, is_US FROM hackathons WHERE isUS = true""")
+	cursor.execute("SELECT name, date, link, location, is_US FROM hackathons WHERE isUS = true")
 	rows = cursor.fetchall()
 	rowarray_list = []
 	for row in rows:
