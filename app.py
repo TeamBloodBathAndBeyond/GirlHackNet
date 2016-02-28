@@ -103,8 +103,6 @@ def updateHackathonAttendance():
 	print(request)
 	hackathonId = request.get_json(force=True)['hackathonId']
 	userId = request.get_json()['userId']
-	cursor.execute("SELECT count FROM hackathonAttendance WHERE id=?",(hackathonId,))
-	oldCount = cursor.fetch()
 	try:
 		cursor.execute("INSERT INTO usersAtHackathon(hackathonId, userId) VALUES(%s,%s)",(hackathonId, userId))
 		cursor.execute("UPDATE hackathonAttendance SET count=count+1 WHERE id=%s",(hackathonId,))
