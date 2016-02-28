@@ -32,7 +32,8 @@
             echo "You're in.";
           }
           else{
-            echo "Username or password is incorrect";
+            echo "<script>alert('Username or Password is incorrect');</script>";
+            echo "<script>document.location.href='index.php'</script>";
           }
         }
       }
@@ -49,7 +50,7 @@
     <!-- <img src='logo.jpg' id='logo' alt='GirlHackNet'> -->
     <h1 id='logo'>GirlHackNet</h1>
     <form id='logInForm'>
-      Name: <input type='text' name='accName'></input>
+      Email: <input type='text' name='accName'></input>
       Password: <input type='password' name='accPassword'></input>
       <button id='signin'>Log In</button>
     </form>

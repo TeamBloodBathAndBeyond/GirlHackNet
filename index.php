@@ -12,7 +12,7 @@
     <!-- <img src='logo.jpg' id='logo' alt='GirlHackNet'> -->
     <h1 id='logo'>GirlHackNet</h1>
     <form id='logInForm' action='validated.php' onsubmit="return validate();" method="POST">
-      Name: <input type='text' name='accName'></input>
+      Email: <input type='text' name='accName'></input>
       Password: <input type='password' name='accPassword'></input>
       <button id='signin'>Log In</button>
     </form>
