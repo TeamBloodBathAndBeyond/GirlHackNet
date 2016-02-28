@@ -87,7 +87,7 @@ def getUserInfo(id):
 		userInfo['bio'] = rawUserInfo[4]
 		userInfo['skills'] = rawUserInfo[5]
 		userInfo['isCollege'] = rawUserInfo[6]
-		return userInfo)
+		return userInfo
 	except MySQLdb.Error, e:
 			print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
 
