@@ -14,7 +14,18 @@
     <h3>Welcome  ADD PERSON'S NAME HERE</h3>
   </div>
   <div id='main'>
-<?php $json = http_get("localhost:800/getEvents"); ?>
+    <?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "girlhack";
+    $dbname = "GirlHack_DB";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if($conn->connect_error){
+      die("Connection failed: " . $conn->connect_error);
+    }
+    $hackathons = mysql_query(getEvents);
+    ?>
   </main>
 </body>
 </html>
