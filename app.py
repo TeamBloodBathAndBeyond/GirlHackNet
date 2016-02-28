@@ -29,7 +29,7 @@ def newUser():
 	#print(isCollege)
 	#languages?
 	try:
-		cursor.execute("INSERT INTO users_test VALUES (9,%s,%s,%s,%s,%s,%s)",(firstName,lastName,password,bio,school,email))
+		cursor.execute("INSERT INTO users_test VALUES (%s,%s,%s,%s,%s,%s)",(firstName,lastName,password,bio,school,email))
 		db.commit()
 		cursor.execute("SELECT * FROM users_test")
 		cursorList = list(cursor)
