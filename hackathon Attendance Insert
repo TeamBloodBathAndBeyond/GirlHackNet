@@ -1,7 +1,7 @@
-DROP TABLE hackathonAttendance;
 CREATE TABLE hackathonAttendance(
    id  INTEGER  NOT NULL PRIMARY KEY 
   ,count INT  NOT NULL
+  ,foreign key (id) references hackathon(id)
 );
 INSERT INTO hackathonAttendance(id,count) VALUES (344,0);
 INSERT INTO hackathonAttendance(id,count) VALUES (361,0);

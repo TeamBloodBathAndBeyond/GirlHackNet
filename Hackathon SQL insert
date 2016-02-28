@@ -1,4 +1,3 @@
-DROP TABLE hackathon;
 CREATE TABLE hackathon(
    id       INTEGER  NOT NULL PRIMARY KEY 
   ,name     VARCHAR(20) NOT NULL
