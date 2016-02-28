@@ -66,7 +66,7 @@ def getEvents():
 			t['link'] = row[3] 
 			t['location'] = row[4]
 			#Now go out and find the count of people at each event
-			cursor.execute("SELECT count from hackathonAttendance WHERE id=%d",(id,))
+			cursor.execute("SELECT count from hackathonAttendance WHERE id=%s",(id,))
 			t['count'] = cursor.fetch()
 			rowarray_list.append(t)
 		results = json.dumps(rowarray_list)	
