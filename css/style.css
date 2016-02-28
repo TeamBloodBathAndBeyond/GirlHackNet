@@ -7,7 +7,7 @@ Colors:
   #19808E
   */
 body{
-  background-color:#51afbc;
+  background-image: url('../imgs/newTexture.png');
   font-family: Tahoma, Geneva, sans-serif;
   margin: 0;
   padding: 0;
@@ -27,6 +27,7 @@ img{
 #logo{
   font-size: 3em;
   color:#AEE5ED;
+  margin-left: 20px;
   /*-webkit-text-stroke: 2px #32929F; */
 }
 #header{
@@ -38,7 +39,14 @@ img{
 #logInForm{
   margin-top:-80px;
   float:right;
+  display:inline;
+  margin-right: 20px;
+}
+#signup{
+  margin-top:-55px;
+  float:right;
   text-align:inline;
+  margin-right: 20px;
 }
 #info{
   width:73%;
