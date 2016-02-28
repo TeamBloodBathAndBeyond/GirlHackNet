@@ -55,7 +55,8 @@ def getEvents():
 	try:
 		cursor.execute("SELECT id, name, date, link, location FROM hackathon where is_US = 1")
 		rowarray_list = []
-		for row in cursor:
+		cursorList = list(cursor)
+		for row in cursorList:
 			#building JSON object format
 			t = {}
 			id = row[0]
