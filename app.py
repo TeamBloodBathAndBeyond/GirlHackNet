@@ -13,7 +13,8 @@ cursor = db.cursor()
 
 @app.route('/')
 def index():
-	return render_template('./index.php')
+	url_for('static', filename='css')
+	return render_template('index.php')
 
 @app.route('/newUser/', methods=['POST'])
 def newUser():
