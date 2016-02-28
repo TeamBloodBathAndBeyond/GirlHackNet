@@ -5,6 +5,7 @@
   <title>GirlHackNet - Home</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="icon" href="imgs/miniLogo.jpg" type="image/jpg" sizes="16x16">
+  <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
   <script src="validate.js"></script>
   <script src="js/popup.js"></script>
 </head>
