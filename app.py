@@ -32,9 +32,9 @@ def getEvents():
 	print "reached the function"
 	try:
 		cursor.execute("SELECT name, date, link, location, is_US FROM hackathon WHERE is_US = true")
-		rows = cursor.fetchall()
+		#rows = cursor.fetchall()
 		rowarray_list = []
-		for row in rows:
+		for row in cursor:
 			print row
 			t = (row.name, row.date, row.link, row.location)
 			rowarray_list.append(t)
