@@ -14,8 +14,9 @@ body{
 }
 img{
   display:block;
-  width:75%;
+  width:73%;
   margin:0 auto;
+  margin-top: 30px;
   border-radius: 10px;
 }
 #signup{
@@ -25,29 +26,34 @@ img{
   width:100%;
 }
 #logo{
-  font-size: 3em;
+  font-size: 4em;
   color:#AEE5ED;
   margin-left: 20px;
   /*-webkit-text-stroke: 2px #32929F; */
 }
 #header{
-  margin-top: -33px;
+  /*margin-top: -33px;*/
   width:100%;
+  padding-bottom: 35px;
   padding-right:10px;
   background-color: #19808E;
 }
 #logInForm{
-  margin-top:-80px;
+  margin-top:-75px;
   float:right;
   display:inline;
   margin-right: 20px;
 }
-#signup{
-  margin-top:-55px;
+/*#signup{
+  margin-top:-5px;
   float:right;
-  text-align:inline;
-  margin-right: 20px;
-}
+  margin-right: -210px;
+}*/
+/*#logInSubmit{
+  margin-top:10px;
+  margin-right: 120px;
+  float:right;
+}*/
 #info{
   width:73%;
   margin: 10px auto;
