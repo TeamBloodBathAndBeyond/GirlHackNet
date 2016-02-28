@@ -7,7 +7,7 @@ app = Flask(__name__)
 db = MySQLdb.connect(host="localhost",    
 					 user="root",         
 					 passwd="girlhack",  
-					 db="GirlHack_db")
+					 db="GirlHack_DB")
 cur = db.cursor()
 
 @app.route('/newUser/', methods=['POST'])
