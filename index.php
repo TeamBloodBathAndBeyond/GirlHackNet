@@ -11,21 +11,41 @@
 <body>
   <div id='header' class='container'>
     <!-- <img src='logo.jpg' id='logo' alt='GirlHackNet'> -->
-    <h1 id='logo'>GirlHackNet</h1>
-    <form id='logInForm' action='validated.php' onsubmit="return validate();" method="POST">
+    <a href='index.html'>
+      <img src='imgs/logo.png' id='logo' alt='GirlHackNet'>
+    </a>
+    <!-- <h1 id='logo'>GirlHackNet</h1> -->
+    <!-- <form id='logInForm' action='validated.php' onsubmit="return validate();" method="POST">
       Email: <input type='text' name='accName'></input>
       Password: <input type='password' name='accPassword'></input>
       <button id='signin'>Log In</button>
-    </form>
-
-
+    </form> -->
+    <div class="ui middle aligned very relaxed stackable grid" id='logInForm'>
+        <div class="ui form">
+          <div class="field">
+            <label>Username</label>
+            <div class="ui left icon input">
+              <input type="text" placeholder="Username">
+              <i class="user icon"></i>
+            </div>
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <div class="ui left icon input">
+              <input type="password">
+              <i class="lock icon"></i>
+            </div>
+          </div>
+          <div class="ui blue submit button" onclick="return validate();">Login</div>
+        </div>
+    </div>
       <br>
     </form>
     <button id='signup' onclick='div_show()'>Sign up here!</button>
   </div>
-  <div id='main' class='container'>
+  <div id='main'>
     <div id='pop-up'>
-      <form action="localhost:800/newUser/" id="popForm" method="post" name="form">
+      <form action="localhost:800/newUser/" class='ui form small' id="popForm" method="post" name="form">
         <h2>Join GirlHackNet Today!</h2>
         <hr>
         First Name:
@@ -55,12 +75,13 @@
         Skills <span id='skillsSpan' style='font-size: 10pt; font-style: italic;'>ie Java,C++,Python,JSON (No spaces please!)</span>:
         <textarea rows="4" cols="50"></textarea>
         <br>
-        <input type='submit' href="javascript:%20check_empty()" value="Submit">
+        <input type='submit' href="javascript:%20check_empty()" class='ui button small' value="Submit">
         <button onclick ="div_hide()">Cancel</button>
       </form>
     </div>
     <div id='imgBanner'>
       <img class="img" src="imgs/coolGals1.jpg">
+      <button class='ui button massive' id='signup' onclick='div_show()'>Sign up today!</button>
     </div>
     <div id='info'>
       <p>
