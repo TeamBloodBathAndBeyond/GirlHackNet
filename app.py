@@ -114,7 +114,7 @@ def updateHackathonAttendance():
 #internal API function
 def getHackathonUsers(id):
 	try:
-		cursor.execute("SELECT userId FROM WHERE hackathonId=%s",(id,))
+		cursor.execute("SELECT userId FROM usersAtHackathon WHERE hackathonId=%s",(id,))
 		usersInfo = []
 		for row in cursor:
 			userId = row[0]
