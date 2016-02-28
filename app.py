@@ -10,6 +10,7 @@ db = MySQLdb.connect(host="localhost",
 					 db="GirlHack_DB")
 cursor = db.cursor()
 
+
 @app.route('/newUser/', methods=['POST'])
 def newUser():
 	#print("made it to the function")
@@ -52,13 +53,22 @@ def getEvents():
 		for row in cursorList:
 			#building JSON object format
 			t = {}
-			t['id'] = row[0]
+			id = row[0]
+			t['id'] = id
 			t['name'] = row[1]
 			t['date'] = row[2] 
 			t['link'] = row[3] 
 			t['location'] = row[4]
+			#Now go out and find the count of people at each event
+			cursor.execute("SELECT count from hackathonAttendance WHERE id=?",(id))
+			t['count'] = cursor.fetch()
 			rowarray_list.append(t)
 		results = json.dumps(rowarray_list)	
 		return results 
 	except MySQLdb.Error, e:
             print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
+
+def getUserInfo():
+def getAttendendanceCount():
+def updateAttedanceCount():
+def getHackathonUsers():
