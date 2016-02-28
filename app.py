@@ -103,11 +103,11 @@ def updateHackathonAttendance():
 	print(request)
 	hackathonId = request.get_json(force=True)['hackathonId']
 	userId = request.get_json()['userId']
-	cursor.execute("SELECT count FROM hackathonAttendance WHERE id=?",(hackathonId))
+	cursor.execute("SELECT count FROM hackathonAttendance WHERE id=?",(hackathonId,))
 	oldCount = cursor.fetch()
 	try:
 		cursor.execute("INSERT INTO usersAtHackathon(hackathonId, userId) VALUES(?,?)",(hackathonId, userId))
-		cursor.execute("UPDATE hackathonAttendance SET count=count+1 WHERE id=?",(hackathonId))
+		cursor.execute("UPDATE hackathonAttendance SET count=count+1 WHERE id=?",(hackathonId,))
 		db.commit()
 	except MySQLdb.Error, e:
 		print("Run function Error %d: %s" % (e.args[0], e.args[1]))
