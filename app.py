@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 import MySQLdb
 import json
 
@@ -11,6 +11,9 @@ db = MySQLdb.connect(host="localhost",
 					 db="GirlHack_DB")
 cursor = db.cursor()
 
+@app.route('/')
+def index():
+	return render_template('index.php')
 
 @app.route('/newUser/', methods=['POST'])
 def newUser():
