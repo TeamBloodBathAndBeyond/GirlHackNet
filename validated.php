@@ -19,6 +19,7 @@
       $usn = $_POST['accName'];
       $pass = hash('sha256', $_POST['accPassword']);
 
+
       $conn = new mysqli($servername, $username, $password, $dbname);
       if($conn->connect_error){
         die("Connection failed: " . $conn->connect_error);
@@ -29,7 +30,8 @@
       if($result->num_rows > 0){
         while($row = $result->fetch_assoc()){
           if($usn == $row['email'] && $pass = $row['password']){
-            echo "You're in.";
+            $userfname = $row['first_name'];
+            echo "<script>alert('Welcome back, $userfname!');</script>";
           }
           else{
             echo "<script>alert('Username or Password is incorrect');</script>";
