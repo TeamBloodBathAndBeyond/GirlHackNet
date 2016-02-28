@@ -106,8 +106,8 @@ def updateHackathonAttendance():
 	cursor.execute("SELECT count FROM hackathonAttendance WHERE id=?",(hackathonId,))
 	oldCount = cursor.fetch()
 	try:
-		cursor.execute("INSERT INTO usersAtHackathon(hackathonId, userId) VALUES(?,?)",(hackathonId, userId))
-		cursor.execute("UPDATE hackathonAttendance SET count=count+1 WHERE id=?",(hackathonId,))
+		cursor.execute("INSERT INTO usersAtHackathon(hackathonId, userId) VALUES(%s,%s)",(hackathonId, userId))
+		cursor.execute("UPDATE hackathonAttendance SET count=count+1 WHERE id=%s",(hackathonId,))
 		db.commit()
 	except MySQLdb.Error, e:
 		print("Run function Error %d: %s" % (e.args[0], e.args[1]))
@@ -131,7 +131,7 @@ def getHackathonUsers(id):
 def getHackathonInfo():
 	id = request.args.get('event')
 	#Getting the hackathon event
-	cursor.execute("SELECT name, location, link, date FROM hackathon where id = ?"(id))
+	cursor.execute("SELECT name, location, link, date FROM hackathon where id = ?",(id))
 	hackathon = {}
 	hackData = cursor.fetch()
 	hackathon['name'] = hackData[0]
