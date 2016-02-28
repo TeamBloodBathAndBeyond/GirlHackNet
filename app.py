@@ -40,4 +40,4 @@ def getEvents():
 			rowarray_list.append(t)
 		return json.dumps(rowarray_list)
 	except MySQLdb.Error, e:
-            logger.info( "Run function with query: %s Error %d: %s" % (query,e.args[0], e.args[1]))
+            print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
