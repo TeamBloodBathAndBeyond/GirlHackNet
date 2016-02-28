@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 db = MySQLdb.connect(host="localhost",    
 					 user="root",         
-					 passwd="girlhack",  
+					 passwd="Girlhack",  
 					 db="girlHack_db")
 cur = db.cursor()
 
