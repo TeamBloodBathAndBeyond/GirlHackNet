@@ -116,7 +116,7 @@ def getHackathonUsers(id):
 	try:
 		cursor.execute("SELECT userId FROM WHERE hackathonId=",(id))
 		usersInfo = []
-		for(row in cursor)
+		for row in cursor:
 			userId = row[0]
 			usersInfo.append(getUserInfo(userId))
 		return json.dumps(usersInfo)
