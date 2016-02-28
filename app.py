@@ -110,6 +110,7 @@ def updateHackathonAttendance():
 	except MySQLdb.Error, e:
 		print("Run function Error %d: %s" % (e.args[0], e.args[1]))
 		db.rollback()
+	return json.dumps({})
 
 #internal API function
 def getHackathonUsers(id):
