@@ -35,9 +35,9 @@ def newUser():
 	#languages?
 	try:
 		#TODO update for actual table
-		cursor.execute("INSERT INTO users(email,firstName,lastName,password,school,bio,skills,isCollege) VALUES (%s,%s,%s,%s,%s,%s,%s)",(email,firstName,lastName,password,bio,school,email))
+		cursor.execute("INSERT INTO users(email,firstName,lastName,password,school,bio,skills,isCollege) VALUES (%s,%s,%s,%s,%s,%s,%s, %s)",(email,firstName,lastName,password,bio,school,email, isCollege))
 		db.commit()
-		#TODO remove this
+		#TODO remove this, testing only
 		cursor.execute("SELECT * FROM users")
 		cursorList = list(cursor)
 		rowarray_list = []
