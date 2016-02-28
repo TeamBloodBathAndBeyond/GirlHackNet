@@ -78,7 +78,7 @@ def getEvents():
 def getUserInfo(id):
 	try:
 		cursor.execute("SELECT email, firstname, lastName, school, bio, skills, isCollege FROM users where id = ?",id)
-		rawUserInfo = cursor.fetch()
+		rawUserInfo = cursor.fetchone()[0]
 		userInfo = {}
 		userInfo['firstName'] = rawUserInfo[1]
 		userInfo['lastName'] = rawUserInfo[2]
@@ -100,7 +100,6 @@ def retrieveUserInfo():
 
 @app.route('/updateEventAttendance/', methods=['POST'])	
 def updateHackathonAttendance():
-	print(request)
 	hackathonId = request.get_json(force=True)['hackathonId']
 	userId = request.get_json()['userId']
 	try:
@@ -115,7 +114,7 @@ def updateHackathonAttendance():
 #internal API function
 def getHackathonUsers(id):
 	try:
-		cursor.execute("SELECT userId FROM WHERE hackathonId=",(id))
+		cursor.execute("SELECT userId FROM WHERE hackathonId=%s",(id))
 		usersInfo = []
 		for row in cursor:
 			userId = row[0]
@@ -130,9 +129,9 @@ def getHackathonUsers(id):
 def getHackathonInfo():
 	id = request.args.get('event')
 	#Getting the hackathon event
-	cursor.execute("SELECT name, location, link, date FROM hackathon where id = ?",(id))
+	cursor.execute("SELECT name, location, link, date FROM hackathon where id =%s",(id))
 	hackathon = {}
-	hackData = cursor.fetch()
+	hackData = cursor.fetchone()[0]
 	hackathon['name'] = hackData[0]
 	hackathon['location'] = hackData[1]
 	hackathon['link'] = hackData[2]
