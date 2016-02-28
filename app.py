@@ -118,7 +118,7 @@ def getHackathonUsers(id):
 		for row in cursor:
 			userId = row[0]
 			usersInfo.append(getUserInfo(userId))
-		return json.dumps(usersInfo)
+		return usersInfo
 	except MySQLdb.Error, e:
 		print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
 
