@@ -30,11 +30,14 @@ def newUser():
 @app.route('/getEvents/', methods=['GET'])
 def getEvents():
 	print "reached the function"
-	cursor.execute("SELECT name, date, link, location, is_US FROM hackathons WHERE is_US = true")
-	rows = cursor.fetchall()
-	rowarray_list = []
-	for row in rows:
-		print row
-		t = (row.name, row.date, row.link, row.location)
-		rowarray_list.append(t)
-	return json.dumps(rowarray_list)
+	try:
+		cursor.execute("SELECT name, date, link, location, is_US FROM hackathons WHERE is_US = true")
+		rows = cursor.fetchall()
+		rowarray_list = []
+		for row in rows:
+			print row
+			t = (row.name, row.date, row.link, row.location)
+			rowarray_list.append(t)
+		return json.dumps(rowarray_list)
+	except MySQLdb.Error, e:
+            logger.info( "Run function with query: %s Error %d: %s" % (query,e.args[0], e.args[1]))
