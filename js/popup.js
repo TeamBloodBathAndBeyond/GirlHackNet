@@ -10,9 +10,10 @@ function check_empty() {
 //Function To Display Popup
 function div_show() {
   document.getElementById('pop-up').style.display = "block";
-  var nodes = document.getElementsByTagName('body')[0].childNodes;
+  console.log('showing');
 }
 //Function to Hide Popup
 function div_hide(){
   document.getElementById('pop-up').style.display = "none";
+  console.log('hiding');
 }
