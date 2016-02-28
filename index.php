@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>GirlHackNet</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="icon" href="imgs/miniLogo.jpg" type="image/jpg" sizes="16x16">
   <script src="validate.js"></script>
   <script src="js/popup.js"></script>
 </head>
@@ -56,25 +57,15 @@
     </div>
     <div id='info'>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Fusce ac nibh in tellus sodales accumsan ut sit amet lacus.
-        Praesent at sem vel purus iaculis vehicula.
-        Donec fermentum quam vitae nunc vulputate accumsan.
-        Aenean ullamcorper eros ullamcorper ante fringilla, eget convallis elit pretium.
-        Maecenas gravida neque id laoreet consectetur.
-        Suspendisse bibendum ex in eleifend finibus.
-        In eu enim quis diam mattis tempus vel id odio.
-        Duis volutpat ex eget imperdiet vehicula.
-        Aliquam eu augue vitae dolor vulputate convallis vel sit amet dui.
-        Praesent nec orci aliquet, laoreet neque non, viverra mauris.
-        Ut vel elit dignissim felis aliquam bibendum at sit amet mi.
-        Maecenas non dui eu arcu lacinia consequat vel eget massa.
-        Nunc ac diam vel enim pellentesque pharetra eget non risus.
-        Cras a orci sodales, volutpat sapien vel, semper mi.
-        Suspendisse scelerisque dolor vel metus ullamcorper, et porttitor elit elementum.
-        Sed non ex non ex tincidunt vestibulum.
-        Ut feugiat tellus id purus malesuada porta.
-      </p>
+        The number of men who attend hackathons is far greater than the number of women.
+        This is an undeniable fact. Women have been trying to step back into the field of computing
+        but the community is certainly not getting any more estrogen. So we here at BloodBath & Beyond have come up with a solution!
+        <strong>GirlHackNet</strong> is a way for women to connect with other women who are attends the same hackathons they are.
+        Simply sign up with your name, email, and skill set and you will be on your way to a better hacking experience!
+        GirlHackNet's intuitive design will allow all women from all walks of life to find that special group.
+        The group in which you will spend blood, sweat, and tears with for 24-36 hours.
+        So come join in on the fun!
+        </p>
     </div>
   </div>
 </body>
