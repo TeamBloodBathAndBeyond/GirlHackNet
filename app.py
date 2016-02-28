@@ -1,19 +1,20 @@
-from flask import Flask
+from flask import Flask, request
 import MySQLdb
 import json
 
 app = Flask(__name__)
-
+app.debug = True
 db = MySQLdb.connect(host="localhost",    
 					 user="root",         
 					 passwd="girlhack",  
 					 db="GirlHack_DB")
 cursor = db.cursor()
 
+
 @app.route('/newUser/', methods=['POST'])
 def newUser():
-	print("made it to the function")
-	print(str(request.get_data().json))
+	#print("made it to the function")
+	#print(str(request.get_data()))
 	firstName = request.form['firstName']
 	print(firstName)
 	lastName = request.form['lastName']
@@ -25,13 +26,18 @@ def newUser():
 	print(bio)
 	school = request.form['school']
 	print(school)
-	isCollege = request.form['isCollege']
-	print(isCollege)
+	email = request.form['email']
+	#print(isCollege)
 	#languages?
 	try:
-		cursor.execute("INSERT INTO user VALUES (%s,%s,%s,%s,%s,%s)",(firstName,lastName,password,bio,school,isCollege))
+		cursor.execute("INSERT INTO users_test VALUES (%s,%s,%s,%s,%s,%s)",(firstName,lastName,password,bio,school,email))
 		db.commit()
-	except:
+		cursor.execute("SELECT * FROM users_test")
+		cursorList = list(cursor)
+		rowarray_list = []
+		for row in cursorList:
+			print(row)
+	except MySQLdb.Error, e:
 		print( "Run function Error %d: %s" % (e.args[0], e.args[1]))     
 		db.rollback()
 	return json.dumps({})
@@ -47,13 +53,22 @@ def getEvents():
 		for row in cursorList:
 			#building JSON object format
 			t = {}
-			t['id'] = row[0]
+			id = row[0]
+			t['id'] = id
 			t['name'] = row[1]
 			t['date'] = row[2] 
 			t['link'] = row[3] 
 			t['location'] = row[4]
+			#Now go out and find the count of people at each event
+			cursor.execute("SELECT count from hackathonAttendance WHERE id=?",(id))
+			t['count'] = cursor.fetch()
 			rowarray_list.append(t)
 		results = json.dumps(rowarray_list)	
 		return results 
 	except MySQLdb.Error, e:
             print( "Run function Error %d: %s" % (e.args[0], e.args[1]))
+
+def getUserInfo():
+def getAttendendanceCount():
+def updateAttedanceCount():
+def getHackathonUsers():
