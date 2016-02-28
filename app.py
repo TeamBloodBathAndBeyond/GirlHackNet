@@ -37,8 +37,12 @@ def getEvents():
 		#print len(cursorList)
 		rowarray_list = []
 		for row in cursorList:
-			print row
-			t = (row[0], row[1], row[2], row[3])
+			#print row
+			t = {}
+			t['name'] = row[0]
+			t['date'] = row[1] 
+			t['link'] = row[2] 
+			t['location'] = row[3]
 			rowarray_list.append(t)
 		results = json.dumps(rowarray_list)	
 		return results 
