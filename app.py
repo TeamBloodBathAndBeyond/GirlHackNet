@@ -31,10 +31,11 @@ def newUser():
 def getEvents():
 	print "reached the function"
 	try:
-		cursor.execute("SELECT name, date, link, location, is_US FROM hackathon")
+		cursor.execute("SELECT * FROM hackathon")
 		#rows = cursor.fetchall()
+		cursorList = list(cursor)
 		rowarray_list = []
-		for row in cursor:
+		for row in cursorList:
 			print row
 			t = (row.name, row.date, row.link, row.location)
 			rowarray_list.append(t)
