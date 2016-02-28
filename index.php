@@ -9,7 +9,7 @@
   <script src="js/popup.js"></script>
 </head>
 <body>
-  <div id='header'>
+  <div id='header' class='container'>
     <!-- <img src='logo.jpg' id='logo' alt='GirlHackNet'> -->
     <h1 id='logo'>GirlHackNet</h1>
     <form id='logInForm' action='validated.php' onsubmit="return validate();" method="POST">
@@ -20,16 +20,10 @@
 
 
       <br>
-<<<<<<< HEAD
-      <input type='submit' name='logInSubmit' value="Enter">
     </form>
     <button id='signup' onclick='div_show()'>Sign up here!</button>
-=======
-      <button id='signup' onclick='div_show()'>Sign up here!</button>
-
->>>>>>> origin/master
   </div>
-  <div id='main'>
+  <div id='main' class='container'>
     <div id='pop-up'>
       <form action="localhost:800/new/User/" id="popForm" method="post" name="form">
         <h2>Join GirlHackNet Today!</h2>

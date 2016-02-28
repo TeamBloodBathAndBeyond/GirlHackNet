@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <title>GirlHackNet</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="skeleton.css">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
   <script src="validate.js"></script>
   <script src="js/popup.js"></script>
 
