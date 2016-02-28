@@ -23,10 +23,12 @@ p{
   font-size: 14pt;
 }
 #signup{
-  margin-top: 2px;
+  margin: 10px auto;
 }
 #imgBanner{
   width:100%;
+  display:inline-block;
+  text-align: center;
 }
 #logo{
   /*font-size: 4em;*/
@@ -51,11 +53,6 @@ p{
   margin-right: 20px;
 }
 /*This code is bad and i should feel bad but idk how to fix.*/
-#signup{
-  float:right;
-  margin-right: 100px;
-  margin-top: -6.4%;
-}
 #logInSubmit{
   float:right;
 }
