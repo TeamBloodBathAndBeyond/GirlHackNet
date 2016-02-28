@@ -31,7 +31,7 @@ def newUser():
 def getEvents():
 	print "reached the function"
 	try:
-		cursor.execute("SELECT name, date, link, location, is_US FROM hackathons WHERE is_US = true")
+		cursor.execute("SELECT name, date, link, location, is_US FROM hackathon WHERE is_US = true")
 		rows = cursor.fetchall()
 		rowarray_list = []
 		for row in rows:
