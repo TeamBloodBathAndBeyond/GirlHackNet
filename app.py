@@ -5,9 +5,9 @@ import json
 app = Flask(__name__)
 
 db = MySQLdb.connect(host="localhost",    
-                     user="root",         
-                     passwd="girlhack",  
-                     db="girlHack_db")
+					 user="root",         
+					 passwd="girlhack",  
+					 db="girlHack_db")
 cur = db.cursor()
 
 @app.route('/newUser/', methods=['POST'])
@@ -21,10 +21,10 @@ def newUser():
 	isCollege = request.form['isCollege']
 	#languages?
 	try:
-    	cursor.execute("INSERT INTO user VALUES (%s,%s,%s,%s,%s,%s)",(firstName,lastName,password,bio,school,isCollege))
-    	db.commit()
+		cursor.execute("INSERT INTO user VALUES (%s,%s,%s,%s,%s,%s)",(firstName,lastName,password,bio,school,isCollege))
+		db.commit()
 	except:     
-    	db.rollback()
+		db.rollback()
 
 #Assume US locations for now. Maybe EU someday
 @app.route('/getEvents/', methods=['GET'])
@@ -33,6 +33,6 @@ def getEvents():
 	rows = cursor.fetchall()
 	rowarray_list = []
 	for row in rows:
-	    t = (row.name, row.date, row.link, row.location)
-    	rowarray_list.append(t)
+		t = (row.name, row.date, row.link, row.location)
+		rowarray_list.append(t)
 	return json.dumps(rowarray_list)
